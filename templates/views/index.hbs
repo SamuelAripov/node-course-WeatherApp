@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <title>{{title}}</title>
+    {{>header}}
+    <link rel="stylesheet" href="./styles/stylePages.css">
+</head>
+
+<body>
+    <br>
+    <span>F°</span>
+    <label class="switch">
+        <input type="checkbox" id="tempUnit">
+        <span class="slider round"></span>
+    </label>
+    <span>C°</span>
+    <span style="font-size: 13px">In what units should the temperature be measured?</span>
+    {{>text}}
+    <h5 id="weatherItself"></h5>
+    {{>footer}}
+</body>
+<script src="./JS/app.js"></script>
+
+</html>
