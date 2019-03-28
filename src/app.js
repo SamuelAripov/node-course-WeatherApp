@@ -1,8 +1,10 @@
 const path = require('path')
-const express = require('express')
 const hbs = require('hbs')
+
+const express = require('express')
 const app = express()
-//111111111111111111111111111111111111111111111111
+const port = process.env.PORT || 3000
+
 //Defining values for request
 let units = 'auto'
 let tempType = 'F'
@@ -59,6 +61,6 @@ app.get('*', (req, res) => {
         href: '/'
     })
 })
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Server is up on port 3000')
 })
