@@ -15,7 +15,7 @@ let fetchTheWeather = () => {
     }).catch(value => {
         fetch(`https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/a7056b73015ab391704090db56a47c69/${value.latitude},${value.longitude}?units=${units}`).then((res) => {
             res.json().then((data) => {
-                document.querySelector('#weatherItself').innerHTML = `Weather in ${value.city} ${value.regionName} ${value.country} is:<br>${data.daily.summary}<br>${data.daily.data[0].summary}<br>And the current temperature is about ${data.currently.temperature}°${tempType}<br>There is ${data.currently.precipProbability}% chance of rain`
+                document.querySelector('#weatherItself').innerHTML = `Weather in ${value.city} ${value.country} is:<br>${data.daily.summary}<br>${data.daily.data[0].summary}<br>And the current temperature is about ${data.currently.temperature}°${tempType}<br>There is ${data.currently.precipProbability}% chance of rain`
             })
         })
     })
