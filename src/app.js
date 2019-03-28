@@ -10,13 +10,6 @@ let units = 'auto'
 let tempType = 'F'
 let lang = 'en'
 
-//change temp value on slider change
-if (document.getElementById('tempUnit').checked == true) {
-    tempType = 'C'
-} else {
-    tempType = 'F'
-}
-
 //Defining paths
 const publicDirPath = express.static(path.join(__dirname, '../public'))
 const viewsDirPath = path.join(__dirname, '../templates/views')
@@ -40,7 +33,7 @@ app.get('', (req, res) => {
     }
     res.render('index', {
         title: 'Weather',
-        text: `The weather (${tempType}°) in your area is: `,
+        text: `The weather in your area is: `,
     })
 })
 app.get('/about', (req, res) => {
