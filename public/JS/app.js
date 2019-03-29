@@ -21,6 +21,10 @@ let fetchTheWeather = () => {
     })
 }
 fetchTheWeather()
+
+setInterval(() => {
+    fetchTheWeather()
+}, 60000)
 tempSlider.addEventListener("click", e => {
     if (tempSlider.checked == true) {
         units = 'si'
