@@ -46,9 +46,11 @@ app.get('/about', (req, res) => {
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help page',
-        text: 'Having trouble? Look through the help articles to find a solution!',
         href: '/'
     })
+})
+app.get('/pismo', (req, res) => {
+    res.render('pismo')
 })
 app.get('/help/*', (req, res) => {
     res.render('help', {
